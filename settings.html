@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>⚙️ Settings - The Book Studio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    select, input[type="checkbox"] {
+      margin-top: 5px;
+      padding: 10px;
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      background: #ffffff10;
+      color: white;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background: linear-gradient(145deg, #00feba, #5b86e5);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .message {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #90ee90;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚙️ Settings</h1>
+
+  <label for="theme">🎨 Select Theme:</label>
+  <select id="theme" onchange="previewTheme(this.value)">
+    <option value="dark">Dark</option>
+    <option value="light">Light</option>
+  </select>
+
+  <label for="language">🌐 Select Language:</label>
+  <select id="language" onchange="previewLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="hi">हिन्दी</option>
+    <option value="bn">বাংলা</option>
+    <option value="mr">मराठी</option>
+    <option value="gu">ગુજરાતી</option>
+    <option value="pa">ਪੰਜਾਬੀ</option>
+    <option value="ta">தமிழ்</option>
+    <option value="te">తెలుగు</option>
+    <option value="ur">اردو</option>
+    <!-- More languages can be added -->
+  </select>
+
+  <label for="notifications">
+    <input type="checkbox" id="notifications" />
+    🔔 Enable Notifications
+  </label>
+
+  <button onclick="saveSettings()">💾 Save Settings</button>
+
+  <div class="message" id="message"></div>
+
+  <script>
+    const previewTheme = (value) => {
+      document.body.style.background = value === 'light' ? '#f0f0f0' : 'linear-gradient(135deg, #1e3c72, #2a5298)';
+      document.body.style.color = value === 'light' ? '#000' : '#fff';
+    }
+
+    const previewLanguage = (lang) => {
+      localStorage.setItem("language", lang);
+    }
+
+    window.onload = () => {
+      const theme = localStorage.getItem('theme') || 'dark';
+      const lang = localStorage.getItem('language') || 'en';
+      const notify = localStorage.getItem('notifications') === 'true';
+
+      document.getElementById('theme').value = theme;
+      document.getElementById('language').value = lang;
+      document.getElementById('notifications').checked = notify;
+
+      previewTheme(theme);
+    };
+
+    function saveSettings() {
+      const theme = document.getElementById('theme').value;
+      const language = document.getElementById('language').value;
+      const notifications = document.getElementById('notifications').checked;
+
+      localStorage.setItem('theme', theme);
+      localStorage.setItem('language', language);
+      localStorage.setItem('notifications', notifications);
+
+      document.getElementById('message').innerText = '✅ Settings saved successfully!';
+    }
+  </script>
+</body>
+</html>

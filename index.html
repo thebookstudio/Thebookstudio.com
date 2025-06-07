@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📘 मेरी किताब - The Book Studio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #1e3c72, #2a5298, #1cb5e0, #000046);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: white;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      background: linear-gradient(to right, #00feba, #5b86e5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+      opacity: 0.8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .photo {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .photo img {
+      width: 120px;
+      border-radius: 50%;
+      border: 4px solid #00feba;
+      box-shadow: 0 0 12px #00feba;
+    }
+
+    .description, .about {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .about ul {
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+
+    .chapters {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .chapters button {
+      background: linear-gradient(145deg, #00feba, #5b86e5);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .chapters button:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>📚 The Book Studio</h1>
+      <p><i>By Dhakar</i></p>
+    </header>
+
+    <div class="photo">
+      <img src="jony.png" alt="Author Image" />
+    </div>
+
+    <div class="description">
+        यहा कई किताबे है जो आपको उस जीवन का अनुभव कराने मे सहायता करती है जिस जीवन को आप कभी असल मे जीना चाहते है ये किताबे आप को खुद से पहचानने मे मदद करेगी
+      <br><br>
+      ✨ <em>"हर कहानी का एक मोड़ होता है, और मेरी कहानी की मंज़िल तुम हो।"</em>
+    </div>
+
+    <div class="about">
+      <h2 style="text-align:center; font-size: 24px; margin-bottom: 10px;">📖 About The Book Studio</h2>
+      <p><strong>The Book Studio</strong> सिर्फ एक वेबसाइट नहीं, यह एक ख्वाब है — एक ऐसी जगह जहाँ शब्दों को साँसें मिलती हैं, और कहानियाँ दिल से निकलकर दुनिया तक पहुँचती हैं।</p>
+      <p>इस स्टूडियो की शुरुआत की है <strong>Dhakar</strong> ने — एक ऐसा लड़का जो अपनी कलम से जज़्बात, ख्वाब और ज़िंदगी को ज़िंदा करता है। चाहे वो इश्क़ की कहानी हो या संघर्ष की आग, हर पन्ने में वो सच्चाई है जो हर किसी की ज़िंदगी से जुड़ी लगती है।</p>
+      <ul>
+        <li>✍️ खुद की लिखी गई किताबें — प्यार, संघर्ष, सफर, और सच्चाई पर</li>
+        <li>📖 Free & Exclusive Content — सिर्फ यहीं मिलेगा</li>
+        <li>🚀 Upcoming Projects और Real Author Journey</li>
+        <li> apni kahani hme bheje hm use ik naya rup denge </li>
+      </ul>
+      <p style="margin-top:10px;"><em>“हर किताब एक आइना है — जो तुम्हें खुद से मिलवाएगी।”</em></p>
+    </div>
+
+    <div class="chapters">
+      <button onclick="location.href='books.html'">📚 Chapters</button>
+      <button onclick="location.href='settings.html'">⚙️ Settings</button>
+    </div>
+
+    <footer>
+      © 2025 Dhakar Creations
+    </footer>
+  </div>
+
+</body>
+</html>

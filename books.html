@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📚 The Book Studio - Books</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a1a2e);
+      background-size: 400% 400%;
+      animation: gradientBG 18s ease infinite;
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      background: linear-gradient(to right, #00feba, #5b86e5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .book-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .book-card {
+      width: 280px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
+      padding: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .book-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(0,255,255,0.4);
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid #00feba;
+    }
+
+    .book-title {
+      font-size: 20px;
+      margin: 12px 0 6px;
+      font-weight: bold;
+      color: #00feba;
+    }
+
+    .book-desc {
+      font-size: 14px;
+      color: #eaeaea;
+      margin-bottom: 10px;
+    }
+
+    .book-btn {
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background: linear-gradient(to right, #00feba, #5b86e5);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 13px;
+      color: #bbb;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 The Book Studio - Collection</h1>
+  </header>
+
+  <div class="book-grid">
+    <!-- Book 1 -->
+    <div class="book-card">
+      <img src="bhula.jpg" alt="Book Cover">
+      <div class="book-title">भुला भुरम लाल </div>
+      <div class="book-desc">एक ऐसी कहानी जो अपनी कहानी ढुढने मे लगा हो । </div>
+      <a href="bhula.html"><button class="book-btn">📖 Read Now</button></a>
+    </div>
+
+    <!-- Book 2 -->
+    <div class="book-card">
+      <img src="door.jpg" alt="Book Cover">
+      <div class="book-title">दरवाजा</div>
+      <div class="book-desc">"जहाँ कहानियाँ नहीं लिखी जातीं, वहाँ वो खुद लेखक चुन लेती हैं — और फिर दरवाज़े कभी बंद नहीं होते।"</div>
+      <a href="skkm.html"><button class="book-btn">📖 Read Now</button></a>
+    </div>
+
+    <!-- Book 3 -->
+    <div class="book-card">
+      <img src="https://via.placeholder.com/250x350" alt="Book Cover">
+      <div class="book-title">Kon Hu Me</div>
+      <div class="book-desc">Urdu-Hindi-English mix me zindagi se ek sawal — aur jawab har panne me.</div>
+      <a href="#"><button class="book-btn">🔗 Open Page</button></a>
+    </div>
+  </div>
+
+    <footer>
+    © 2025 Dhakar Creations
+  </footer>
+
+</body>
+</html>
