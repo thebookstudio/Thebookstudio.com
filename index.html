@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="hi">
-<head>      <meta name="google-site-verification" content="FbKkaBLhtwaGsWpTDIgtq1ORyTmJnZ_fzY_qWt-nt5w" />
-  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="FbKkaBLhtwaGsWpTDIgtq1ORyTmJnZ_fzY_qWt-nt5w" />
   <title>📘 मेरी किताब - The Book Studio</title>
   <style>
     * {
@@ -26,6 +28,12 @@
       100% { background-position: 0% 50%; }
     }
 
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 10px;
+    }
+
     header {
       text-align: center;
       padding: 30px 20px;
@@ -37,7 +45,7 @@
     }
 
     header h1 {
-      font-size: 36px;
+      font-size: 28px;
       background: linear-gradient(to right, #00feba, #5b86e5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -45,13 +53,8 @@
     }
 
     header p {
-      font-size: 16px;
+      font-size: 15px;
       opacity: 0.8;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
     }
 
     .photo {
@@ -60,7 +63,8 @@
     }
 
     .photo img {
-      width: 120px;
+      width: 100px;
+      max-width: 100%;
       border-radius: 50%;
       border: 4px solid #00feba;
       box-shadow: 0 0 12px #00feba;
@@ -80,20 +84,21 @@
     .about ul {
       margin-top: 10px;
       margin-left: 20px;
+      padding-left: 10px;
     }
 
     .chapters {
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
+      gap: 10px;
       flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .chapters button {
       background: linear-gradient(145deg, #00feba, #5b86e5);
       border: none;
-      padding: 12px 24px;
+      padding: 10px 18px;
       border-radius: 30px;
       color: white;
       font-weight: bold;
@@ -101,6 +106,7 @@
       font-size: 14px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: 0.3s;
+      flex: 1 1 auto;
     }
 
     .chapters button:hover {
@@ -112,6 +118,21 @@
       margin-top: 40px;
       font-size: 14px;
       opacity: 0.7;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      .description, .about {
+        font-size: 15px;
+      }
+
+      .chapters button {
+        font-size: 13px;
+        padding: 10px 14px;
+      }
     }
 
   </style>
@@ -129,27 +150,28 @@
     </div>
 
     <div class="description">
-        यहा कई किताबे है जो आपको उस जीवन का अनुभव कराने मे सहायता करती है जिस जीवन को आप कभी असल मे जीना चाहते है ये किताबे आप को खुद से पहचानने मे मदद करेगी
+      यहा कई किताबे है जो आपको उस जीवन का अनुभव कराने मे सहायता करती है जिस जीवन को आप कभी असल मे जीना चाहते है ये किताबे आप को खुद से पहचानने मे मदद करेगी
       <br><br>
       ✨ <em>"हर कहानी का एक मोड़ होता है, और मेरी कहानी की मंज़िल तुम हो।"</em>
     </div>
-             <div class="chapters">
+
+    <div class="chapters">
       <button onclick="location.href='books.html'">📚 Chapters</button>
       <button onclick="location.href='settings.html'">⚙️ Settings</button>
     </div>
-                    <div class="about">
-      <h2 style="text-align:center; font-size: 24px; margin-bottom: 10px;">📖 About The Book Studio</h2>
+
+    <div class="about">
+      <h2 style="text-align:center; font-size: 22px; margin-bottom: 10px;">📖 About The Book Studio</h2>
       <p><strong>The Book Studio</strong> सिर्फ एक वेबसाइट नहीं, यह एक ख्वाब है — एक ऐसी जगह जहाँ शब्दों को साँसें मिलती हैं, और कहानियाँ दिल से निकलकर दुनिया तक पहुँचती हैं।</p>
       <p>इस स्टूडियो की शुरुआत की है <strong>Dhakar</strong> ने — एक ऐसा लड़का जो अपनी कलम से जज़्बात, ख्वाब और ज़िंदगी को ज़िंदा करता है। चाहे वो इश्क़ की कहानी हो या संघर्ष की आग, हर पन्ने में वो सच्चाई है जो हर किसी की ज़िंदगी से जुड़ी लगती है।</p>
       <ul>
         <li>✍️ खुद की लिखी गई किताबें — प्यार, संघर्ष, सफर, और सच्चाई पर</li>
         <li>📖 Free & Exclusive Content — सिर्फ यहीं मिलेगा</li>
         <li>🚀 Upcoming Projects और Real Author Journey</li>
-        <li> apni kahani hme bheje hm use ik naya rup denge </li>
+        <li>अपनी कहानी हमें भेजें, हम उसे एक नया रूप देंगे</li>
       </ul>
       <p style="margin-top:10px;"><em>“हर किताब एक आइना है — जो तुम्हें खुद से मिलवाएगी।”</em></p>
     </div>
-
 
     <footer>
       © 2025 Dhakar Creations
