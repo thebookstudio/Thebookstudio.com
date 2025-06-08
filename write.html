@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Write Yours - The Book Studio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1cb5e0, #000046);
+      min-height: 100vh;
+      margin: 0;
+      padding: 30px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-box {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      width: 100%;
+      background: linear-gradient(145deg, #00feba, #5b86e5);
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <h2>✍️ अपनी कहानी हमें भेजें</h2>
+    <form action="https://formspree.io/f/mnnvjeky" method="POST">
+      <label for="name">आपका नाम</label>
+      <input type="text" name="name" required />
+
+      <label for="email">आपका ईमेल</label>
+      <input type="email" name="email" required />
+
+      <label for="message">आपकी कहानी</label>
+      <textarea name="message" rows="6" required></textarea>
+
+      <button type="submit">भेजें 📩</button>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📞 Contact - The Book Studio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #00feba;
+    }
+
+    .links a {
+      display: block;
+      margin: 10px 0;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(to right, #00feba, #5b86e5);
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-align: center;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .links a:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px;
+      border-radius: 30px;
+      border: none;
+      background: linear-gradient(to right, #00feba, #5b86e5);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📞 Contact Dhakar</h1>
+    <div class="links">
+      <a href="https://instagram.com/dhakar_2.0" target="_blank">📸 Instagram: @dhakar_2.0</a>
+      <a href="mailto:dhakarjony20@gmail.com">📧 Gmail: dhakarjony20@gmail.com</a>
+      <a href="https://m.youtube.com/@Daksh_13-u7d4z/shorts" target="_blank">▶️ YouTube Channel</a>
+    </div>
+
+    <form action="https://formspree.io/f/mnnvjeky" method="POST">
+      <input type="email" name="email" placeholder="आपका ईमेल" required />
+      <textarea name="message" rows="5" placeholder="आपका संदेश..." required></textarea>
+      <button type="submit">✉️ भेजें</button>
+    </form>
+  </div>
+</body>
+</html>
