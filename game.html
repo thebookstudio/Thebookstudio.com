@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🦖 Emoji Dino - Mobile Perfect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffe29f, #ffa99f, #ff719a);
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      touch-action: manipulation;
+    }
+
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(to top, #2e003e, #100720);
+      border: none;
+      touch-action: none;
+    }
+  </style>
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+let width = window.innerWidth;
+let height = window.innerHeight;
+
+canvas.width = width;
+canvas.height = height;
+
+// Resize on orientation change or rotate
+window.addEventListener("resize", () => {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
+  groundLevel = height * 0.85;
+});
+
+let groundLevel = height * 0.85;
+
+let dino = {
+  x: width * 0.1,
+  y: 0,
+  size: height * 0.08,
+  vy: 0,
+  gravity: 1.4,
+  jump: -18,
+  grounded: true
+};
+
+let cactus = {
+  x: width,
+  y: 0,
+  size: height * 0.07,
+  speed: width * 0.014
+};
+
+let score = 0;
+let bestScore = parseInt(localStorage.getItem("emojiDinoBest")) || 0;
+let gameOver = false;
+
+const emojis = {
+  dino: "🦖",
+  cactus: "🌵",
+  ground: "🟫"
+};
+
+function jump() {
+  if (dino.grounded) {
+    dino.vy = dino.jump;
+    dino.grounded = false;
+  }
+}
+
+document.addEventListener("keydown", e => {
+  if (e.code === "Space") jump();
+});
+document.addEventListener("touchstart", () => jump());
+
+function drawEmoji(x, y, size, emoji) {
+  ctx.font = size + "px serif";
+  ctx.fillText(emoji, x, y);
+}
+
+function update() {
+  if (gameOver) return;
+
+  ctx.clearRect(0, 0, width, height);
+
+  // Dino physics
+  dino.y += dino.vy;
+  dino.vy += dino.gravity;
+  if (dino.y >= groundLevel - dino.size) {
+    dino.y = groundLevel - dino.size;
+    dino.vy = 0;
+    dino.grounded = true;
+  }
+
+  // Cactus
+  cactus.x -= cactus.speed;
+  cactus.y = groundLevel - cactus.size;
+  if (cactus.x < -cactus.size) {
+    cactus.x = width + Math.random() * width * 0.5;
+    score++;
+    if (score > bestScore) {
+      bestScore = score;
+      localStorage.setItem("emojiDinoBest", bestScore);
+    }
+  }
+
+  // Collision
+  if (
+    dino.x < cactus.x + cactus.size &&
+    dino.x + dino.size > cactus.x &&
+    dino.y < cactus.y + cactus.size &&
+    dino.y + dino.size > cactus.y
+  ) {
+    gameOver = true;
+    setTimeout(() => {
+      alert(`☠️ Game Over!\nYour Score: ${score}\n🏆 Best: ${bestScore}`);
+      location.reload();
+    }, 100);
+  }
+
+  // Ground
+  for (let i = 0; i < width; i += height * 0.04) {
+    drawEmoji(i, groundLevel + height * 0.02, height * 0.035, emojis.ground);
+  }
+
+  drawEmoji(dino.x, dino.y, dino.size, emojis.dino);
+  drawEmoji(cactus.x, cactus.y, cactus.size, emojis.cactus);
+
+  // Scoreboard
+  ctx.fillStyle = "#fff";
+  ctx.font = height * 0.035 + "px Arial";
+  ctx.fillText("🏃 " + score, 10, height * 0.07);
+  ctx.fillText("🥇 " + bestScore, width - 100, height * 0.07);
+
+  requestAnimationFrame(update);
+}
+
+update();
+</script>
+</body>
+</html>
