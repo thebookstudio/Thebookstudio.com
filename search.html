@@ -3,104 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Shayari Generator - OpenRouter</title>
+  <title>AI Multi-Search Generator</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fffdf4;
-      padding: 20px;
-    }
-    h2 {
-      text-align: center;
-      color: #e65100;
-    }
+    body { font-family: 'Segoe UI', sans-serif; background: #fcf9f2; padding: 20px; }
+    h2 { text-align: center; color: #bf360c; }
     select, input, button {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+      width: 100%; padding: 12px; font-size: 16px; margin: 8px 0;
+      border-radius: 8px; border: 1px solid #aaa; box-sizing: border-box;
     }
-    button {
-      background: #ff7043;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .output {
-      margin-top: 20px;
-      background: #fff;
-      padding: 15px;
-      border-left: 5px solid #ff7043;
-      border-radius: 8px;
-      font-size: 18px;
-      min-height: 80px;
-      white-space: pre-line;
+    .btn-main { background: #ff7043; color: white; font-weight: bold; cursor: pointer; transition: .3s; }
+    .btn-main:hover { background: #e64a19; }
+    .btn-toggle { background: #009688; color: white; }
+    .btn-copy { background: #1976d2; color: white; margin-top: 5px; }
+    .btn-speak { background: #388e3c; color: white; margin-top: 5px; }
+    .output { margin-top: 16px; background: #fff; padding: 16px;
+      border-left: 5px solid #ff7043; border-radius: 8px; font-size: 18px;
+      white-space: pre-line; display: none; position: relative;
     }
   </style>
 </head>
 <body>
 
-  <h2>🎤 AI Shayari Generator</h2>
+  <h2>🎤 AI Multi-Search Generator</h2>
 
   <select id="langSelect">
-    <option value="Hindi">हिन्दी</option>
-    <option value="Urdu">اردو</option>
-    <option value="English">English</option>
-    <option value="Gujarati">ગુજરાતી</option>
-    <option value="Tamil">தமிழ்</option>
-    <option value="Telugu">తెలుగు</option>
-    <option value="Marathi">मराठी</option>
-    <option value="Bangla">বাংলা</option>
-    <option value="Punjabi">ਪੰਜਾਬੀ</option>
-    <option value="Nepali">नेपाली</option>
-    <option value="Arabic">العربية</option>
-    <option value="French">Français</option>
-    <option value="German">Deutsch</option>
-    <option value="Russian">Русский</option>
-    <option value="Chinese">中文</option>
-    <option value="Japanese">日本語</option>
+    <option value="Hindi">हिन्दी</option><option value="Urdu">اردو</option>
+    <option value="English">English</option><option value="Gujarati">ગુજરાતી</option>
+    <!-- add more if needed -->
   </select>
 
-  <input type="text" id="inputText" placeholder="Topic likho jaise: love, pyar, dosti...">
-  <button onclick="getShayari()">💌 शायरी बनाओ</button>
+  <select id="searchType">
+    <option value="Shayari">🎤 Shayari</option>
+    <option value="Quote">💬 Quote</option>
+    <option value="Joke">😂 Joke</option>
+    <option value="Story">📖 Kahani</option>
+  </select>
 
-  <div class="output" id="result">यहाँ शायरी दिखाई जाएगी...</div>
+  <input id="inputText" placeholder="Topic likho jaise: pyar, zindagi, dosti...">
+  <button class="btn-main" onclick="getContent()">➡️ Generate</button>
+  <button class="btn-toggle" onclick="toggleOutput()">👁️ Show/Hide Last Result</button>
+
+  <div class="output" id="result">
+    <div id="textContent">यहाँ आएगा result...</div>
+    <button class="btn-copy" onclick="copyText()">📋 Copy</button>
+    <button class="btn-speak" onclick="speakText()">🔊 Speak</button>
+  </div>
 
   <script>
-    async function getShayari() {
+    async function getContent() {
       const topic = document.getElementById("inputText").value.trim();
       const lang = document.getElementById("langSelect").value;
-      const result = document.getElementById("result");
+      const type = document.getElementById("searchType").value;
+      const resultDiv = document.getElementById("result");
+      const textEl = document.getElementById("textContent");
 
       if (!topic) {
-        result.innerText = "कृपया कोई विषय लिखिए...";
+        alert("कृपया topic डालें!");
         return;
       }
 
-      result.innerText = "⏳ कृपया प्रतीक्षा करें, शायरी बन रही है...";
+      resultDiv.style.display = "block";
+      textEl.textContent = "⏳ Generating...";
 
-      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": "Bearer ", // 🔁 अपनी API key यहाँ लगाओ
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "mistralai/mistral-7b-instruct",
-          messages: [
-            {
-              role: "user",
-              content: `Write a beautiful poetic 4-line Shayari in ${lang} on the topic: "${topic}"`
-            }
-          ]
-        })
-      });
+      let prompt = "";
+      if (type === "Shayari") prompt = `4-line poetic Shayari in ${lang} on "${topic}"`;
+      else if (type === "Quote") prompt = `Inspirational quote in ${lang} about "${topic}"`;
+      else if (type === "Joke") prompt = `Short funny joke in ${lang} about "${topic}"`;
+      else if (type === "Story") prompt = `Short motivational story in ${lang} about "${topic}"`;
 
-      const data = await response.json();
-      const shayari = data.choices?.[0]?.message?.content;
-      result.innerText = shayari || "😔 शायरी प्राप्त नहीं हो सकी।";
+      try {
+        const resp = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer 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",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            model: "mistralai/mistral-7b-instruct",
+            messages: [{ role: "user", content: prompt }]
+          })
+        });
+        const data = await resp.json();
+        const txt = data.choices?.[0]?.message?.content || "😔 कोई content नहीं मिला।";
+        textEl.textContent = txt;
+      } catch (e) {
+        textEl.textContent = "❌ Error fetching content.";
+        console.error(e);
+      }
+
+      document.getElementById("inputText").value = "";
+    }
+
+    function toggleOutput() {
+      const div = document.getElementById("result");
+      div.style.display = div.style.display === "none" ? "block" : "none";
+    }
+
+    function copyText() {
+      const txt = document.getElementById("textContent").textContent;
+      navigator.clipboard.writeText(txt);
+      alert("Copied to clipboard!");
+    }
+
+    function speakText() {
+      const txt = document.getElementById("textContent").textContent;
+      const utt = new SpeechSynthesisUtterance(txt);
+      utt.lang = document.getElementById("langSelect").value === "Hindi" 
+        ? "hi-IN" : "en-US";
+      speechSynthesis.speak(utt);
     }
   </script>
 
