@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>💘 Love Shayari</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+    a.back {
+      display: block;
+      margin-bottom: 15px;
+      color: #e91e63;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .shayari-box {
+      position: relative;
+      margin: 10px 0 30px 0;
+    }
+    .shayari {
+      background: #fff;
+      border-left: 4px solid #e91e63;
+      padding: 15px 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .copy-container {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .copy-btn {
+      background: #e91e63;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .copy-btn:hover {
+      background: #c2185b;
+    }
+  </style>
+</head>
+<body><a class="back" href="sh.html">← Back to Categories</a>
+
+<h1>💘 Love Shayari (50)</h1><!-- START SHAYARI BLOCKS --><script>
+  const shayariList = [
+    "Tere bina jee na paayenge hum, tujhse juda ho ke mar jaayenge hum.",
+    "Mohabbat kiya tha tumse dil se, ab nafrat bhi tumse hi karte hain.",
+    "Har pal tujhe yaad karte hain, tere bina har ghadi udaas rehti hai.",
+    "Teri muskurahat meri jaan hai, tujhme hi basi meri pehchaan hai.",
+    "Tere bina adhuri si lagti hai zindagi, tu hai to har pal hai suhani.",
+    "Aankhon mein basa ke rakha hai tujhe, khud se zyada chaha hai tujhe.",
+    "Teri baatein teri yaadein, har lamha mere saath rehti hain.",
+    "Tujhko chahna meri khata thi, ab to har saza qubool hai.",
+    "Tera naam mere dil ki duaon mein hai, tu hi to har duaon ka silsila hai.",
+    "Teri hasi meri duniya hai, tu ho to sab kuch hai.",
+    "Dil karta hai tujhe har pal dekhu, har saans mein tujhe mehsoos karu.",
+    "Mohabbat mein kya haal ho gaya, zinda hoon par khush nahi.",
+    "Tumhara saath hi meri zindagi ka sukoon hai.",
+    "Tum aaye zindagi mein bahaar ban ke, har gham chhupa liya pyar ban ke.",
+    "Aankhon se baat hoti hai, dil se izhaar hota hai.",
+    "Tujhme hi basa hai mera jahan, tu hai to sab hai.",
+    "Tera intezaar reh gaya, dil beqaraar reh gaya.",
+    "Tu door hokar bhi mere paas hai, tera ehsaas mere saath hai.",
+    "Teri yaadon mein kho gaya hoon, bas tujhme hi jee raha hoon.",
+    "Tum meri har muskurahat ka sabab ho.",
+    "Zindagi ki har raah tujhme simat jaaye, aise tu saath ho.",
+    "Tum mile to khud se pyar ho gaya, pehli baar jeene ka ehsaas ho gaya.",
+    "Har dua mein tera naam liya, har khushi mein tujhe yaad kiya.",
+    "Pyar sirf lafzon ka khel nahi, yeh dil se dil tak jaata hai.",
+    "Tujhse mila to laga jise har khushi mil gayi.",
+    "Tere bina adhura hoon main, tu hi meri zindagi ka chain hai.",
+    "Mohabbat tujhme hai, khushboo ki tarah mehka karti hai.",
+    "Dil karta hai tere saath har lamha bitaun.",
+    "Tere saath chalna meri aadat si ban gayi hai.",
+    "Tu mila to zindagi mein roshni aa gayi.",
+    "Tere pyaar mein har gham sukoon ban gaya.",
+    "Teri yaadon ka asar chhane laga hai mujh par.",
+    "Tujhse juda hoke bhi tu mere saath hai.",
+    "Har pal tujhme hi kho jaata hoon.",
+    "Tu ho to zindagi rangeen hai, tu na ho to sab veeran.",
+    "Tumhara pyaar meri rooh mein bas gaya hai.",
+    "Teri aankhon mein sapne mere, teri khushi meri dua hai.",
+    "Har lamha tu mere dil ke kareeb hai.",
+    "Teri khamoshi bhi mujhe baatein karti hai.",
+    "Tere saath bitaye pal yaadon mein chamakte hain.",
+    "Tumhara saath meri taqdeer ban gaya.",
+    "Teri baahon mein sukoon milta hai, jaise jannat mil gayi ho.",
+    "Tu ho to har dard mit jaaye, tu na ho to zindagi adhuri.",
+    "Tumhara naam mere labon ki dua ban gaya.",
+    "Pyar karna tumse mere liye ek ibadat hai.",
+    "Teri muskurahat mein meri jaan chhupi hai.",
+    "Tere saath jeena meri khushi ka sabab hai.",
+    "Tu saath ho to har mushkil aasaan lagti hai.",
+    "Tumhara saath ek nasha ban gaya hai.",
+    "Mohabbat sirf tujhi se hai, ab aur kisi ka naam bhi socha nahi."
+  ];
+
+  for (let i = 0; i < shayariList.length; i++) {
+    document.write(`
+      <div class="shayari-box">
+        <div class="shayari">
+          ${i + 1}. ${shayariList[i]}
+        </div>
+        <div class="copy-container">
+          <button class="copy-btn" onclick="copyText(this)">⋮ Copy</button>
+        </div>
+      </div>
+    `);
+  }
+
+  function copyText(button) {
+    const text = button.parentElement.previousElementSibling.textContent.trim();
+    navigator.clipboard.writeText(text).then(() => {
+      button.textContent = "✅ Copied!";
+      setTimeout(() => {
+        button.textContent = "⋮ Copy";
+      }, 1500);
+    });
+  }
+</script></body>
+</html>
