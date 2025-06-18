@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>Geet Chaturvedi Shayari</title>
+  <style>
+    body { font-family: 'Georgia', serif; background: #fffaf0; color: #333; padding: 20px; }
+    h1 { text-align: center; color: #8b0000; }
+    .shayari { background: #fff0e0; padding: 15px; margin: 10px 0; border-left: 5px solid #8b0000; border-radius: 5px; position: relative; }
+    button { position: absolute; top: 10px; right: 10px; background: #8b0000; color: #fff; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+    button:hover { background: #a00000; }
+  </style>
+</head>
+<body>
+<h1>Geet Chaturvedi </h1>
+
+<div class="shayari" id="s1">
+  तुम भी इधर हो, मैं भी इधर हूं,<br>
+  खामोशी की एक नदी के किनारे,<br>
+  शब्दों ने खुदकुशी कर रखी है,<br>
+  और हम बस खामोशी का दीदार कर रहे हैं।
+  <button onclick="copyText('s1')">Copy</button>
+</div>
+
+<div class="shayari" id="s2">
+  मौसम भी रूठा है तुमसे दूर होने पर,<br>
+  आसमान चुप है, पर बादल बरस रहे हैं,<br>
+  और हमारी बातें तुम्हारे ख्यालों में,<br>
+  अनकहे ही इधर से उधर हो रही हैं।
+  <button onclick="copyText('s2')">Copy</button>
+</div>
+
+<div class="shayari" id="s3">
+  तेरी याद का वो पहला सवेरा,<br>
+  चाय की खुशबू में घुला रहता है,<br>
+  हवाओं ने भी पूछना छोड़ दिया है,<br>
+  कि नाम लेने से क्या बदलता है?
+  <button onclick="copyText('s3')">Copy</button>
+</div>
+
+<div class="shayari" id="s4">
+  किताबों में तेरा नाम लिखना चाहता था,<br>
+  पन्नों ने सफ़ेद रहने को मना किया,<br>
+  मैंने सोचा शब्दों से कहूंगा,<br>
+  पर शब्दों ने ही छुपने का बहाना बनाया।
+  <button onclick="copyText('s4')">Copy</button>
+</div>
+
+<div class="shayari" id="s5">
+  हमारी चुप्पी कविता लिए घूमती है,<br>
+  और तुम्हारी मुस्कान सवालों की तरह,<br>
+  ना पूछो ज़ोर से कि क्या हो गया,<br>
+  क्योंकि बहुत कुछ अनकही ही दर्द है।
+  <button onclick="copyText('s5')">Copy</button>
+</div>
+
+<div class="shayari" id="s6">
+  रात की खामोशी में सोचा तुम्हें याद करूँ,<br>
+  चाँद ने बीच में ही रोक दिया,<br>
+  बोला तुम तो उसकी तरह एक टुकड़ा हो,<br>
+  जिसे वो पूरा देखना चाहे।
+  <button onclick="copyText('s6')">Copy</button>
+</div>
+
+<div class="shayari" id="s7">
+  सिर्फ तुम्हारी याद ही तो ली जाती है,<br>
+  बाक़ी हसरतें भूल सी जाती हैं,<br>
+  जीवन एक अंतहीन सवाल है,<br>
+  और तुम मेरा अक्स बन सी जाती हो।
+  <button onclick="copyText('s7')">Copy</button>
+</div>
+
+<div class="shayari" id="s8">
+  होठों पर दूर खामोशियाँ जमी हैं,<br>
+  आँखों में तुम्हारे मेरे साये,<br>
+  ज़िंदगी बेनाम है तुम्हारे बिना,<br>
+  और मैं एक अधूरी दास्ताँ बन गया हूँ।
+  <button onclick="copyText('s8')">Copy</button>
+</div>
+
+<div class="shayari" id="s9">
+  शब्दों में तुम हो, पर एहसास खामोश है,<br>
+  एहसासों में तुम हो, पर वक्त बोलता नहीं,<br>
+  चुप्पियों ने भी अब तो हार मान ली है,<br>
+  बस तुम्हारा इंतज़ार करती है।
+  <button onclick="copyText('s9')">Copy</button>
+</div>
+
+<div class="shayari" id="s10">
+  दिल ने हर बार जीती तुम्हें याद करने की जंग,<br>
+  लेकिन तुम्हारी आँखों ने हार मान ली थी,<br>
+  अब यादें ही साथ हैं,<br>
+  तुम एक अजनबी सी दूरी बनकर बची हो।
+  <button onclick="copyText('s10')">Copy</button>
+</div>
+
+<div class="shayari" id="s11">
+  ज़िंदगी के पेपेज में एक अल्फ़ाज़ हो तुम,<br>
+  चुप्स हैं तो भी असर तुम से ही है,<br>
+  लिखू या ना लिखूं तुम्हें—<br>
+  ये सवाल हर पन्ने पर बिखरा रहा है।
+  <button onclick="copyText('s11')">Copy</button>
+</div>
+
+<div class="shayari" id="s12">
+  जब तुम मुस्कुराती हो,<br>
+  सुबह की रोशनी भी शर्मा जाती है,<br>
+  लेकिन जब छुप जाती हो खामोशी में,<br>
+  सारे सूरज की चमक फीकी लगे।
+  <button onclick="copyText('s12')">Copy</button>
+</div>
+
+<div class="shayari" id="s13">
+  रात का सन्नाटा कहता है मुझे—<br>
+  तुम सिर्फ एक खयाल से नहीं,<br>
+  एक ज़िंदगी बन चुकी हो तुम,<br>
+  जिसे मैं ज़ोर से फड़फड़ाते रखता हूँ।
+  <button onclick="copyText('s13')">Copy</button>
+</div>
+
+<div class="shayari" id="s14">
+  चाय की प्याली में घुल कर भी,<br>
+  स्वाद बदल नहीं पाता,<br>
+  वैसे ही दिल में व्याप्त तुम्हारी याद,<br>
+  मिट्टी में मिल कर भी नहीं जाती।
+  <button onclick="copyText('s14')">Copy</button>
+</div>
+
+<div class="shayari" id="s15">
+  तेरी तस्वीर सी पूछती रहती है आँखें,<br>
+  लबों से कुछ निकलता नहीं,<br>
+  पर दिल छिपा-छिपा कहता है—<br>
+  आज फिर वही एहसास रंग लेते हैं।
+  <button onclick="copyText('s15')">Copy</button>
+</div>
+
+<div class="shayari" id="s16">
+  सड़कों पर जब भी उदासियाँ उठीं,<br>
+  तो पता चला तुम दास्ताँ बनकर साथ हो,<br>
+  हवा भी पिघल जाती है तुम्हारे नाम पर,<br>
+  तुम्हें लिखने की हसरत में बस रात कटते हैं।
+  <button onclick="copyText('s16')">Copy</button>
+</div>
+
+<div class="shayari" id="s17">
+  हवाओं से पूछा—तुम्हारा पैगाम क्या है?<br>
+  बोली—ना तमन्ना, ना आरज़ू,<br>
+  बस एक तन्हा दिल,<br>
+  तुम्हें याद करके मुस्कुरा लेता है।
+  <button onclick="copyText('s17')">Copy</button>
+</div>
+
+<div class="shayari" id="s18">
+  जब तेरी खामोशी भी आवाज़ देती है,<br>
+  तो जान ले कि चाहत बाकी है,<br>
+  हर धड़कन के बीच छुपा है इक नाम—<br>
+  वो नाम तुम हो, यही वजह बाकी है।
+  <button onclick="copyText('s18')">Copy</button>
+</div>
+
+<div class="shayari" id="s19">
+  वो मौसम नहीं बदलते,<br>
+  बदलते हैं ख्वाब,<br>
+  तुम्हारा अक्स जो दिल में है आज भी—<br>
+  हर मौसम को महकाता है।
+  <button onclick="copyText('s19')">Copy</button>
+</div>
+
+<div class="shayari" id="s20">
+  ज़िंदगी की किताब में एक पन्ना हो तुम,<br>
+  धड़कनों में यादों की कौंध हो तुम,<br>
+  तुम्हें ढूंढूँ तो कुअराहटें लौट आती हैं—<br>
+  तुम बस एक एहसास भर हो, मगर ज़िंदगानी हो तुम।
+  <button onclick="copyText('s20')">Copy</button>
+</div>
+
+<div class="shayari" id="s21">
+  तुम्हारी याद भी अब चुप रहती है,<br>
+  जैसे किसी खिड़की की दरार से,<br>
+  आती हो बस धूप की एक परछाईं,<br>
+  और चले जाए चुपके से कुछ कहे बिना।
+  <button onclick="copyText('s21')">Copy</button>
+</div>
+
+<div class="shayari" id="s22">
+  मेरे भीतर एक जंगल उग आया है,<br>
+  जहाँ हर पेड़ पर तुम्हारा नाम उगा है,<br>
+  और हर शाख पर तुम्हारी यादें झूल रही हैं,<br>
+  जैसे कोई कविता हवा में बह रही हो।
+  <button onclick="copyText('s22')">Copy</button>
+</div>
+
+<div class="shayari" id="s23">
+  मोहब्बत एक शहर थी,<br>
+  हम दोनों मुसाफिर,<br>
+  तुम रास्ता बदल गई,<br>
+  मैं अब भी उसी मोड़ पर खड़ा हूँ।
+  <button onclick="copyText('s23')">Copy</button>
+</div>
+
+<div class="shayari" id="s24">
+  मैं हर सुबह खुद को<br>
+  तुम्हारे ख्याल में ढालता हूँ,<br>
+  और रात होते ही<br>
+  फिर से अधूरा हो जाता हूँ।
+  <button onclick="copyText('s24')">Copy</button>
+</div>
+
+<div class="shayari" id="s25">
+  तुम्हारा जाना इतना आसान था,<br>
+  जैसे कोई किताब बिना पढ़े रख दी हो,<br>
+  पर अब हर लफ्ज़ उसी किताब से<br>
+  निकलकर मुझसे सवाल करता है।
+  <button onclick="copyText('s25')">Copy</button>
+</div>
+
+<div class="shayari" id="s26">
+  सन्नाटों में भी आवाज़ें होती हैं,<br>
+  जैसे तेरी हँसी का गूंज,<br>
+  और मेरी खामोशियाँ,<br>
+  उस गूंज में भी खुद को ढूँढती हैं।
+  <button onclick="copyText('s26')">Copy</button>
+</div>
+
+<div class="shayari" id="s27">
+  दिल जब बहुत थक जाता है,<br>
+  तो बस तुम्हारा नाम ले लेता है,<br>
+  और तुम्हारा नाम भी<br>
+  अब मेरे लिए विश्राम बन गया है।
+  <button onclick="copyText('s27')">Copy</button>
+</div>
+
+<div class="shayari" id="s28">
+  तुम जैसे कोई कविता हो,<br>
+  जो आधी रह गई हो,<br>
+  और हर बार जब याद आता है,<br>
+  पूरा हो जाने का एहसास देती हो।
+  <button onclick="copyText('s28')">Copy</button>
+</div>
+
+<div class="shayari" id="s29">
+  किताब के पन्नों से<br>
+  ज़िंदगी नहीं निकलती,<br>
+  पर तेरे खतों से<br>
+  आज भी धड़कनें चलती हैं।
+  <button onclick="copyText('s29')">Copy</button>
+</div>
+
+<div class="shayari" id="s30">
+  तुमसे बिछड़ कर<br>
+  शब्दों का रंग बदल गया,<br>
+  अब हर कविता में<br>
+  सिर्फ अधूरापन रहता है।
+  <button onclick="copyText('s30')">Copy</button>
+</div>
+
+<div class="shayari" id="s31">
+  तुम्हारी यादें भी अब,<br>
+  वक्त की तरह बदलती रहती हैं,<br>
+  कभी धूप जैसी चुभती हैं,<br>
+  तो कभी चाँदनी बनकर बहलाती हैं।
+  <button onclick="copyText('s31')">Copy</button>
+</div>
+
+<div class="shayari" id="s32">
+  तुम वो खामोशी थी,<br>
+  जिसे मैं हर रोज़ सुनता रहा,<br>
+  और अब वही खामोशी<br>
+  मेरी सबसे बड़ी आवाज़ बन गई है।
+  <button onclick="copyText('s32')">Copy</button>
+</div>
+
+<div class="shayari" id="s33">
+  कुछ रिश्ते ऐसे होते हैं,<br>
+  जो टूटते नहीं,<br>
+  बस दिल में,<br>
+  धीरे-धीरे धुंधला जाते हैं।
+  <button onclick="copyText('s33')">Copy</button>
+</div>
+
+<div class="shayari" id="s34">
+  तुम्हारी हर बात,<br>
+  जैसे कोई पुरानी कविता हो,<br>
+  जिसे सुनकर भी<br>
+  पढ़ने की चाह बनी रहती है।
+  <button onclick="copyText('s34')">Copy</button>
+</div>
+
+<div class="shayari" id="s35">
+  जब दिल नहीं लिखता,<br>
+  तो हाथ भी रुक जाते हैं,<br>
+  और जब तुम याद आती हो,<br>
+  तो हर चीज़ खुद-ब-खुद कविता बन जाती है।
+  <button onclick="copyText('s35')">Copy</button>
+</div>
+
+<div class="shayari" id="s36">
+  हम जब भी मिले,<br>
+  वक्त जैसे थम गया हो,<br>
+  और अब जब तुम नहीं हो,<br>
+  तो वक्त भी ज़रूरत से ज़्यादा तेज़ चल रहा है।
+  <button onclick="copyText('s36')">Copy</button>
+</div>
+
+<div class="shayari" id="s37">
+  कुछ मुलाकातें<br>
+  सिर्फ मुलाकातें नहीं होतीं,<br>
+  वो पूरी ज़िंदगी<br>
+  बन जाती हैं।
+  <button onclick="copyText('s37')">Copy</button>
+</div>
+
+<div class="shayari" id="s38">
+  मुझे अब भी याद है,<br>
+  जब तुमने कुछ नहीं कहा था,<br>
+  और मैंने सब समझ लिया था—<br>
+  वो खामोशी अब भी जिंदा है मुझमें।
+  <button onclick="copyText('s38')">Copy</button>
+</div>
+
+<div class="shayari" id="s39">
+  दूर होकर भी,<br>
+  पास महसूस होती हो,<br>
+  जैसे कोई दुआ,<br>
+  जो लबों तक आई ही ना हो।
+  <button onclick="copyText('s39')">Copy</button>
+</div>
+
+<div class="shayari" id="s40">
+  तेरे जाने के बाद,<br>
+  अब सन्नाटा मेरा दोस्त बन गया है,<br>
+  वो भी कुछ नहीं कहता,<br>
+  बस तेरे जैसा लगता है।
+  <button onclick="copyText('s40')">Copy</button>
+</div>
+
+<div class="shayari" id="s41">
+  तू कहीं दूर नहीं,<br>
+  बस वक्त की धुंध में छुप गई है,<br>
+  और मैं हर सुबह तुझे,<br>
+  धूप की तरह महसूस करता हूँ।
+  <button onclick="copyText('s41')">Copy</button>
+</div>
+
+<div class="shayari" id="s42">
+  जब ख्याल भी थक जाते हैं,<br>
+  तब यादें बोलने लगती हैं,<br>
+  और तेरी खामोशी में,<br>
+  मेरी आवाज़ बस जाती है।
+  <button onclick="copyText('s42')">Copy</button>
+</div>
+
+<div class="shayari" id="s43">
+  तुझसे जुड़ी हर चीज़,<br>
+  अब भी मेरे कमरे में साँस लेती है,<br>
+  किताबें, चाय, खिड़की का कोना,<br>
+  सब तेरे बिना भी तुझसे भरे हैं।
+  <button onclick="copyText('s43')">Copy</button>
+</div>
+
+<div class="shayari" id="s44">
+  कुछ रिश्ते बारिश जैसे होते हैं,<br>
+  ठंडक देते हैं, भीगा भी जाते हैं,<br>
+  और फिर खुद ही,<br>
+  धूप में खो जाते हैं।
+  <button onclick="copyText('s44')">Copy</button>
+</div>
+
+<div class="shayari" id="s45">
+  मैंने तेरी तसवीर को,<br>
+  किताबों में छुपा रखा है,<br>
+  और हर बार पढ़ते हुए,<br>
+  तेरे चेहरे की मुस्कान खोजता हूँ।
+  <button onclick="copyText('s45')">Copy</button>
+</div>
+
+<div class="shayari" id="s46">
+  तेरी चुप्पी भी,<br>
+  जैसे एक अधूरी कविता हो,<br>
+  जिसे मैं हर रात,<br>
+  अपने सपनों में पूरा करता हूँ।
+  <button onclick="copyText('s46')">Copy</button>
+</div>
+
+<div class="shayari" id="s47">
+  तू मिली तो जैसे,<br>
+  ज़िंदगी को शब्द मिल गए,<br>
+  और जब गई,<br>
+  तो सब खामोशियाँ कविता बन गईं।
+  <button onclick="copyText('s47')">Copy</button>
+</div>
+
+<div class="shayari" id="s48">
+  तेरे जाने के बाद,<br>
+  घर नहीं बदला,<br>
+  पर हर कोना,<br>
+  तन्हाई से भर गया।
+  <button onclick="copyText('s48')">Copy</button>
+</div>
+
+<div class="shayari" id="s49">
+  मैंने वक़्त से मांगा तुझे,<br>
+  पर वक़्त खुद,<br>
+  तेरे नाम से चिढ़ता रहा,<br>
+  और मैं ख़ुद को भूलता रहा।
+  <button onclick="copyText('s49')">Copy</button>
+</div>
+
+<div class="shayari" id="s50">
+  जब भी तेरी याद आती है,<br>
+  तो ज़ुबान खामोश रहती है,<br>
+  पर दिल की दीवारें,<br>
+  तेरा नाम दोहराने लगती हैं।
+  <button onclick="copyText('s50')">Copy</button>
+</div>
+
+<div class="shayari" id="s51">
+  मुझे अब आदत हो गई है,<br>
+  उन बातों की,<br>
+  जो कभी तूने कही ही नहीं,<br>
+  पर हर रोज़ सुनाई देती हैं।
+  <button onclick="copyText('s51')">Copy</button>
+</div>
+
+<div class="shayari" id="s52">
+  तुम्हारी आंखों की वो तन्हा सी चमक,<br>
+  अब भी मेरी रातों का चाँद है,<br>
+  और हर अंधेरे में,<br>
+  वही मुझे रास्ता दिखाती है।
+  <button onclick="copyText('s52')">Copy</button>
+</div>
+
+<div class="shayari" id="s53">
+  मैं तेरे बिना भी,<br>
+  तेरे साथ ही हूँ,<br>
+  जैसे कविता बिना लफ्ज़ों के,<br>
+  बस एहसासों से लिखी जाती है।
+  <button onclick="copyText('s53')">Copy</button>
+</div>
+
+<div class="shayari" id="s54">
+  हर अल्फ़ाज़ में,<br>
+  बस तू ही है,<br>
+  मैंने तुझसे इश्क़ नहीं,<br>
+  कविता की पूजा की है।
+  <button onclick="copyText('s54')">Copy</button>
+</div>
+
+<div class="shayari" id="s55">
+  तेरी यादें अब,<br>
+  सिरहाने रखी चुप्पियाँ हैं,<br>
+  जो हर सुबह,<br>
+  एक नया अफ़साना सुनाती हैं।
+  <button onclick="copyText('s55')">Copy</button>
+</div>
+
+<div class="shayari" id="s56">
+  कभी-कभी लगता है,<br>
+  तू कोई सपना थी,<br>
+  जो आँखें खुलने से पहले,<br>
+  ज़िंदगी बन गई।
+  <button onclick="copyText('s56')">Copy</button>
+</div>
+
+<div class="shayari" id="s57">
+  मेरी तन्हाई में,<br>
+  सबसे ज़्यादा तेरा नाम गूंजता है,<br>
+  जैसे हर सन्नाटे को,<br>
+  तुझसे ही मतलब हो।
+  <button onclick="copyText('s57')">Copy</button>
+</div>
+
+<div class="shayari" id="s58">
+  उस मोड़ पर अब,<br>
+  कोई नहीं आता,<br>
+  जहाँ तुझे,<br>
+  हर रोज़ मिलने की उम्मीद थी।
+  <button onclick="copyText('s58')">Copy</button>
+</div>
+
+<div class="shayari" id="s59">
+  तुमसे बात किए ज़माना हो गया,<br>
+  पर अब भी तुम्हारी आवाज़,<br>
+  हर खामोशी में साफ़ सुनाई देती है।
+  <button onclick="copyText('s59')">Copy</button>
+</div>
+
+<div class="shayari" id="s60">
+  तुझसे इश्क़ करना,<br>
+  जैसे ख़ुद को लिखना हो,<br>
+  और हर बार,<br>
+  तू सबसे खूबसूरत पंक्ति बन जाए।
+  <button onclick="copyText('s60')">Copy</button>
+</div>
+<script>
+  function copyText(id) {
+    const text = document.getElementById(id).innerText.replace("Copy", "").trim();
+    navigator.clipboard.writeText(text).then(() => alert("Shayari copied!"));
+  }
+</script>
+
+</body>
+</html>

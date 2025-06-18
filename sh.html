@@ -1,63 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>📜 Shayari Types</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📜 Trending Shayar</title>
   <style>
     body {
-      font-family: sans-serif;
-      background: #fefefe;
+      font-family: 'Segoe UI', sans-serif;
+      background: #1a1a1a;
+      color: #fff;
       padding: 20px;
     }
     h1 {
       text-align: center;
-      color: #c0392b;
+      margin-bottom: 30px;
     }
-    .shayari-type {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    .shayar-list {
+      display: flex;
+      flex-direction: column;
       gap: 15px;
-      margin-top: 30px;
+      max-width: 600px;
+      margin: auto;
     }
-    a {
-      background: #ffe6e6;
-      color: #333;
+    .shayar {
+      background: #333;
       padding: 15px;
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 0 5px #aaa;
-      text-align: center;
-      font-weight: bold;
+      border-radius: 10px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: background 0.3s;
+      cursor: pointer;
     }
-    a:hover {
-      background: #f2baba;
+    .shayar:hover {
+      background: #555;
+    }
+    .shayar img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .shayar span {
+      color: #fff;
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
-  <h1>📝 Shayari Ke 20 Prakar</h1>
-  <div class="shayari-type">
-    <a href="love.html">💘 Love</a>
-    <a href="sad.html">💔 Sad</a>
-    <a href="funny.html">😂 Funny</a>
-    <a href="dard.html">😢 Dard</a>
-    <a href="romantic.html">🌹 Romantic</a>
-    <a href="ishq.html">😍 Ishq</a>
-    <a href="attitude.html">🎭 Attitude</a>
-    <a href="motivational.html">😇 Motivation</a>
-    <a href="dosti.html">😎 Dosti</a>
-    <a href="zindagi.html">🧠 Zindagi</a>
-    <a href="sufiyana.html">🕊️ Sufiyana</a>
-    <a href="tanhai.html">🌒 Tanhai</a>
-    <a href="song.html">🎶 Song-type</a>
-    <a href="yaad.html">🕰️ Yaad</a>
-    <a href="bewafa.html">😐 Bewafa</a>
-    <a href="judai.html">🔥 Judai</a>
-    <a href="aesthetic.html">🎨 Aesthetic</a>
-    <a href="spiritual.html">📿 Spiritual</a>
-    <a href="career.html">💼 Career</a>
-    <a href="oneline.html">🤐 One-line</a>
+  <h1>🔥 Trending Shayars</h1>
+  <div class="shayar-list">
+    <div class="shayar" onclick="location.href='javed.html'">
+      <img src="javed.jpg" alt="Javed Akhtar">
+      <span>Javed Akhtar</span>
+    </div>
+    <div class="shayar" onclick="location.href='minu.html'">
+      <img src="minu.jpg" alt="Minu Bakshi">
+      <span>Minu Bakshi</span>
+    </div>
+    <div class="shayar" onclick="location.href='pankaj.html'">
+      <img src="pankaj.jpg" alt="Pankaj Prasun">
+      <span>Pankaj Prasun</span>
+    </div>
+    <div class="shayar" onclick="location.href='geet.html'">
+      <img src="geet.jpg" alt="Geet Chaturvedi">
+      <span>Geet Chaturvedi</span>
+    </div>
+    <div class="shayar" onclick="location.href='jacinta.html'">
+      <img src="jasinta.jpg" alt="jasinta ji ">
+      <span>Jacinta Kerketta</span>
+    </div>
+    <div class="shayar" onclick="location.href='akhil.html'">
+      <img src="daksh.jpg" alt="daksh">
+      <span>daksh</span>
+    </div>
+        <div class="shayar" onclick="location.href='dard.html'">
+      <img src="jone.jpg" alt="jony dhakar">
+      <span>jony dhakar</span>
+    </div>
   </div>
 </body>
 </html>
