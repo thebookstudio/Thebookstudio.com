@@ -29,7 +29,7 @@
 
     header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     header h1 {
@@ -37,6 +37,24 @@
       background: linear-gradient(to right, #00feba, #5b86e5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    .search-box {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .search-box input {
+      padding: 12px 20px;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid #00feba;
     }
 
     .book-grid {
@@ -113,48 +131,174 @@
     <h1>📚 The Book Studio - Collection</h1>
   </header>
 
-  <div class="book-grid">
-    <!-- Book 1 -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Search by title or description..." onkeyup="filterBooks()" />
+  </div>
+
+  <div class="book-grid" id="bookGrid">
+    <!-- [All your book cards remain exactly as they are...] -->
+    <!-- Paste your existing book-card blocks here without change -->
+    <!-- Example Book Card (Book 1) -->
     <div class="book-card">
       <img src="bhula.jpg" alt="Book Cover">
-      <div class="book-title">भुला भुरम लाल </div>
+      <div class="book-title">भुला भुरम लाल (bhula bhuram lal) </div>
       <div class="book-desc">एक ऐसी कहानी जो अपनी कहानी ढुढने मे लगा हो । </div>
       <a href="bhula.html"><button class="book-btn">📖 Read Now</button></a>
     </div>
-
-    <!-- Book 2 -->
-    <div class="book-card">
-      <img src="door.jpg" alt="Book Cover">
-      <div class="book-title">दरवाजा</div>
-      <div class="book-desc">"जहाँ कहानियाँ नहीं लिखी जातीं, वहाँ वो खुद लेखक चुन लेती हैं — और फिर दरवाज़े कभी बंद नहीं होते।"</div>
-      <a href="skkm.html"><button class="book-btn">📖 Read Now</button></a>
-    </div>
-
-    <!-- Book 3 -->
-    <div class="book-card">
-      <img src="b.jpg" alt="Book Cover">
-      <div class="book-title">Kon Hu Me</div>
-      <div class="book-desc">Urdu-Hindi-English mix me zindagi se ek sawal — aur jawab har panne me.</div>
-      <a href="banarash.html"><button class="book-btn">📖 Read now</button></a>
-    </div>
+      <!-- Book 2 -->
+  <div class="book-card">
+    <img src="door.jpg" alt="Book Cover">
+    <div class="book-title">दरवाजा(darvaja) </div>
+    <div class="book-desc">"जहाँ कहानियाँ नहीं लिखी जातीं, वहाँ वो खुद लेखक चुन लेती हैं — और फिर दरवाज़े कभी बंद नहीं होते।"</div>
+    <a href="skkm.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
   
-<!-- Book 4 -->
-<div class="book-card">
-  <img src="story4.jpg" alt="Book Cover">
-  <div class="book-title"> वो दूर था</div>
-  <div class="book-desc">जब आसमा भी कह दे कि तेरा ये मकसद कभी ना पूरा होगा तभी तो एक लेखक उभरता है</div>
-  <a href="story4.html"><button class="book-btn">📖 Read Now</button></a>
-</div>
-<!-- Book 5 -->
-<div class="book-card">
-  <img src="story5.jpg" alt="Book Cover">
-  <div class="book-title">चतुर्मुखा</div>
-  <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
-  <a href="story5.html"><button class="book-btn">📖 Read Now</button></a>
-</div>
-    <footer>
+  <!-- Book 3 -->
+  <div class="book-card">
+    <img src="b.jpg" alt="Book Cover">
+    <div class="book-title">मैं हु कौन(Kon Hu Me)</div>
+    <div class="book-desc">Urdu-Hindi-English mix me zindagi se ek sawal — aur jawab har panne me.</div>
+    <a href="banarash.html"><button class="book-btn">📖 Read now</button></a>
+  </div>
+  
+  <!-- Book 4 -->
+  <div class="book-card">
+    <img src="story4.jpg" alt="Book Cover">
+    <div class="book-title"> वो दूर था(vo dur tha) </div>
+    <div class="book-desc">जब आसमा भी कह दे कि तेरा ये मकसद कभी ना पूरा होगा तभी तो एक लेखक उभरता है</div>
+    <a href="story4.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 5 -->
+  <div class="book-card">
+    <img src="story5.jpg" alt="Book Cover">
+    <div class="book-title">चतुर्मुखा(caturmukha) </div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="story5.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 6 -->
+  <div class="book-card">
+    <img src="fukara.jpg" alt="Book Cover">
+    <div class="book-title">फुकरा(fukara)</div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="fukara.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 7 -->
+  <div class="book-card">
+    <img src="vajud.jpg" alt="Book Cover">
+    <div class="book-title">वजुद(vajud) </div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="vajud.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 8 -->
+  <div class="book-card">
+    <img src="akhri-patta.jpg" alt="Book Cover">
+    <div class="book-title">आखरी पत्ता(akhri patta) </div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="akhri-patta.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 9 -->
+  <div class="book-card">
+    <img src="me-hu-na.jpg" alt="Book Cover">
+    <div class="book-title">मै हू ना(me hu na)</div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="me-hu-na.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 10 -->
+  <div class="book-card">
+    <img src="11th-fail.jpg" alt="Book Cover">
+    <div class="book-title">11th fail</div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="11th-fail.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 11 -->
+  <div class="book-card">
+    <img src="pa.jpg" alt="Book Cover">
+    <div class="book-title">पापा (papa) </div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="papa.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 12 -->
+  <div class="book-card">
+    <img src="loveriya.jpg" alt="Book Cover">
+    <div class="book-title">लवेरीया(loveriya)</div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="loveriya.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 13 -->
+  <div class="book-card">
+    <img src="bhairava.jpg" alt="Book Cover">
+    <div class="book-title">भैरव(bhairava)</div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="bhairava.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 14 -->
+  <div class="book-card">
+    <img src="mahila-mitra.jpg" alt="Book Cover">
+    <div class="book-title">महिला मित्र(mahila mitra) </div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="mahila-mitra.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 15 -->
+  <div class="book-card">
+    <img src="story5.jpg" alt="Book Cover">
+    <div class="book-title">आखरी कुर्सी(akhri kurshi)</div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="akhri-kurshi.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- class 16 -->
+  <div class="book-card">
+    <img src="story5.jpg" alt="Book Cover">
+    <div class="book-title">वरदान(vardan)</div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="vardan.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+  <!-- Book 17 -->
+  <div class="book-card">
+    <img src="story5.jpg" alt="Book Cover">
+    <div class="book-title">कलकंडी(kalkandi)</div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="kalkandi.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+    <!-- Book 18 -->
+  <div class="book-card">
+    <img src="story5.jpg" alt="Book Cover">
+    <div class="book-title">online love</div>
+    <div class="book-desc">मनुष्य जीवन मे हर व्यक्ति को हर बार अपना रूप बदलना पडता है </div>
+    <a href="online-love.html"><button class="book-btn">📖 Read Now</button></a>
+  </div>
+    <!-- Paste the rest of your book-card HTML blocks here -->
+
+  </div>
+
+  <footer>
     © 2025 Dhakar Creations
   </footer>
+
+  <script>
+  function normalizeText(text) {
+    return text
+      .toLowerCase()
+      .normalize("NFD") // for accent/diacritics handling
+      .replace(/[\u0300-\u036f]/g, "") // remove extra marks
+      .replace(/[^\w\s\u0900-\u097F]/g, ""); // remove symbols except Hindi
+  }
+  
+  function filterBooks() {
+    const input = normalizeText(document.getElementById('searchInput').value);
+    const cards = document.querySelectorAll('.book-card');
+    
+    cards.forEach(card => {
+      const title = normalizeText(card.querySelector('.book-title').textContent);
+      const desc = normalizeText(card.querySelector('.book-desc').textContent);
+      
+      if (title.includes(input) || desc.includes(input)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
